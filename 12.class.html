@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+<div id="app12">
+<!--    <div class="myDiv">{{msg}}</div>-->
+    <div v-bind:class="{myDiv:flag}">{{msg}}</div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app12',
+        data: {
+            msg: 'hello vue',
+            flag: true
+        }
+    })
+</script>
+<style>
+    .myDiv{
+        font-weight: bold;
+        color: #ff008c;
+    }
+</style>
+</body>
+</html>
