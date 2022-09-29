@@ -9,6 +9,7 @@
 <div id="app5">
   <div>{{message}}</div>
   <button v-on:click="reverseMessage">点击反转字符</button>
+  <input type="text" v-on:keydown.enter="submit">
 </div>
 <script>
   var app = new Vue({
@@ -20,6 +21,9 @@
       reverseMessage(){
         //alert('你好')
         this.message = this.message.split('').reverse().join('')
+      },
+      submit(){
+        alert("提交成功！")
       }
     }
   })
